@@ -1,9 +1,9 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import { images } from 'theme'
 import styles from './dashboard.module.scss'
 
 const Dashboard = () => {
-  const dispatch = useDispatch()
   const { me } = useSelector((state) => state.app)
   return (
     <div className={styles.root}>

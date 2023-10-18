@@ -1,70 +1,180 @@
-# Getting Started with Create React App
+<img src='https://github.com/WataruMaeda/react-firebase-boilerplate/blob/main/__DELELE_ME__/logo.png' width='80px'>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Firebase Boilerplate
+
+- [Live Preview](https://react-firebase-boilerpla-ce757.web.app/)
+
+<img src='https://github.com/WataruMaeda/react-firebase-boilerplate/blob/main/__DELELE_ME__/ss1.jpg' width='100%'> <img src='https://github.com/WataruMaeda/react-firebase-boilerplate/blob/main/__DELELE_ME__/ss2.jpg' width='31%'> <img src='https://github.com/WataruMaeda/react-firebase-boilerplate/blob/main/__DELELE_ME__/ss3.jpg' width='31%'> <img src='https://github.com/WataruMaeda/react-firebase-boilerplate/blob/main/__DELELE_ME__/ss4.jpg' width='31%'>
+
+## About
+
+We spend a large amount of time to setup a project; changing file structure, installing libraries, create reusable components and so on. The purpose of using the project is to minimize the redundant effort to setup a project from scratch. In the boilerplate, it contains only commonly-used libraries and the all setup done for you.
+
+## Require Package Version
+
+- Node: v16.x
+- Yarn: v1.22.x
+- Npm: v8.1.x
+
+Yarn preferable. The deploy automation using yarn.
+
+## How to use
+
+#### Step-1. Setup Firebase App
+
+1. Create firebase web app in [firebase console](https://console.firebase.google.com/u/0/)
+2. Enable **Authentication** and turn on "Email/Password" option
+3. Enable **Storage** and update Rules
+
+```
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    match /users/{userId} {
+      allow read, write : if request.auth.uid == userId;
+		}
+  }
+}
+```
+
+4. Enable **Hosting**
+
+#### Step-2. Install firebase tools
+
+1. Global install firebase tools (skip if you done the step)
+
+```
+$  npm install -g firebase-tools
+```
+
+2. Login to your firebase account (skip if you done the step)
+
+```
+$ firebase login
+```
+
+#### Step-3. Setup the Boilerplate Project
+
+1. Click "Use Template" to start or download the boilerplate from **Download Zip** button
+2. Open the project in the editor
+3. Go to [firebase console](https://console.firebase.google.com/u/0/) again. Copy all API keys from (gear icon) -> Project Settings. Then paste in [.env.development](https://github.com/WataruMaeda/react-firebase-boilerplate/blob/main/.env.development#L2-L8)
+4. Replace project name with yours in [.firebaserc](https://github.com/WataruMaeda/react-firebase-boilerplate/blob/main/.firebaserc#L3)
+5. Install packages with command: `yarn install` or `npm install`
+6. Start project with command: `yarn start` or `npm run start`
 
 ## Available Scripts
 
-In the project directory, you can run:
+#### Build storybook
 
-### `npm start`
+```
+$ yarn storybook
+- or -
+$ npm run storybook
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### Run Unit Test
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+$ yarn test
+- or -
+$ npm run test
+```
 
-### `npm test`
+#### Run Lint
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+$ yarn lint
+- or -
+$ npm run lint
+```
 
-### `npm run build`
+#### Format Code
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+$ yarn format
+- or -
+$ npm run format
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Analyze Bundle Size
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+$ yarn analyze
+- or -
+$ npm run analyze
+```
 
-### `npm run eject`
+#### Run Local Build Test
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+$ yarn build && firebase serve
+- or -
+$ npm build && firebase serve
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Deploy Live
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+$ yarn build && firebase deploy --only hosting
+- or -
+$ npm build && firebase deploy --only hosting
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Libraries
 
-## Learn More
+`Database/hosting/authentication`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [firebase](https://firebase.google.com/)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+`Icons`
 
-### Code Splitting
+- [fontawesome](https://github.com/FortAwesome/react-fontawesome)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+`Style`
 
-### Analyzing the Bundle Size
+- [bootstrap](https://react-bootstrap.github.io/)
+- [css-module](https://github.com/css-modules/css-modules)
+- [node-sass](https://github.com/sass/node-sass)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+`UI Components`
 
-### Making a Progressive Web App
+- [reactstrap](https://github.com/reactstrap/reactstrap)
+- [react-select](https://github.com/JedWatson/react-select)
+- [react-spinners](https://github.com/davidhu2000/react-spinners)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+`Navigation`
 
-### Advanced Configuration
+- [react-router-dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+`Store`
 
-### Deployment
+- [redux](https://github.com/reduxjs/redux)
+- [redux-logger](https://github.com/LogRocket/redux-logger)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+`SEO`
 
-### `npm run build` fails to minify
+- [react-helmet](https://github.com/nfl/react-helmet)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+`Test`
+
+- [jest](https://github.com/facebook/jest)
+- [storybook](https://github.com/storybookjs/storybook)
+
+`Dev`
+
+- [eslint](https://github.com/eslint/eslint)
+- [prettier](https://github.com/prettier/prettier)
+- [jest](https://jestjs.io/)
+- [husky](https://github.com/typicode/husky)
+
+`CI and Auto Deployment`
+
+- [GitHub Action for Firebase](https://github.com/marketplace/actions/github-action-for-firebase)
+
+## Licence
+
+This project is available under the MIT license. See the [LICENSE](https://github.com/WataruMaeda/react-native-boilerplate/blob/main/LICENSE) file for more info.

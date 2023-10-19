@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from 'app'
+import App from 'App'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'theme/reset.scss'
 import reportWebVitals from './reportWebVitals'

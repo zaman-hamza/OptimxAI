@@ -15,14 +15,17 @@
  */
 
 html {
-  font-size: 16px; /* base font size */
+  font-size: 16px;
+  /* base font size */
 
   @include phone {
-    font-size: 2.78vw; /* 16px at 576px */
+    font-size: 2.78vw;
+    /* 16px at 576px */
   }
 
   @include desktop-or-more {
-    font-size: 1.11vw; /* 16px at 1440px */
+    font-size: 1.11vw;
+    /* 16px at 1440px */
   }
 }
 
@@ -67,10 +70,12 @@ button {
   font: inherit;
   letter-spacing: inherit;
   appearance: none;
+
   &:focus {
     outline: none;
     box-shadow: none;
   }
+
   &:disabled {
     opacity: 0.6;
   }
@@ -86,6 +91,7 @@ a {
   font-family: $roboto, sans-serif;
   text-decoration: underline;
   color: $purple;
+
   &:hover {
     color: $pink;
     transition: color 0.3s;

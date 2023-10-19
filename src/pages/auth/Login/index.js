@@ -91,21 +91,18 @@ const Login = () => {
       />
       <div className={styles.footerContainer}>
         <div className={styles.textContainer}>
-          New user?{' '}
           <Button
             label="Sign up"
-            className={styles.linkButton}
+            className={`btn-black-fill ${styles.linkButton}`}
             onClick={() => history.push(path.signup)}
           />
         </div>
         <div className={styles.textContainer}>
-          Forget{' '}
           <Button
-            label="Password"
-            className={styles.linkButton}
+            label="Reset Password"
+            className={`btn-black-fill ${styles.linkButton}`}
             onClick={() => history.push(path.resetPassword)}
           />
-          ?
         </div>
       </div>
       <ConfirmEmail

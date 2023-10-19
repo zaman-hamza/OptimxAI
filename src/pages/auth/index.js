@@ -11,14 +11,11 @@ const Auth = () => (
   <div className={styles.root}>
     <div className={styles.leftContainer}>
       <img src={images.logo} className={styles.logo} alt="logo" />
-      <h1 className={styles.header}>👋 React Firebase Boilerplate</h1>
-      <p className={styles.title}>What’s includes?</p>
+      <h1 className={styles.header}>OptimxAI</h1>
+      <p className={styles.title}>Login to account</p>
       <p className={styles.description}>
-        Firebase Authentication | Firebase Hosting | Firestore | Firebase
-        Storage | Storybook | Prettier | Eslint | Jest | Bundle Analizer | Redux
-        | React Router Dom ...and more!
+        Login with account to access Api key and URL
       </p>
-      <p className={styles.prompt}>Try it and check how it works 👉</p>
     </div>
     <div className={styles.rightContainer}>
       <Switch>

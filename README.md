@@ -2,21 +2,31 @@
 
 ## Overview
 
-Welcome to the GitHub repository for **OptimxAI**. This repository serves as the central hub for our company, specializing in the fine-tuning and deployment of AI models. We're excited to have you here!
+Welcome to the GitHub repository for **OptimxAI**. This repository serves as the central hub for our company, which has evolved significantly over time. Initially focused on fine-tuning and deploying AI models, we have since pivoted to automating the creation of Jira tickets for product managers, making their workflows more efficient.
 
 ### About OptimxAI
 
-OptimxAI is a forward-thinking company dedicated to fine-tuning and deploying AI models. We specialize in enhancing open-source AI models to address a wide range of applications. Our mission is to advance the AI industry while making its benefits accessible to all.
+OptimxAI started as a company dedicated to refining and deploying AI models. Over time, we recognized a bigger challenge in product management: streamlining task management. Today, we leverage AI to automate Jira ticket creation, helping product managers save time and focus on strategy.
 
-### Key Features
+### Key Features (Post-Pivot)
 
-- AI Model Fine-Tuning: We excel in refining open-source AI models for specific tasks.
-- Ethical AI Deployment: We prioritize ethical and responsible AI integration.
-- Seamless Model Deployment: Our expertise enables easy model integration into various applications.
+- **Automated Jira Ticket Creation**: AI-powered automation that generates Jira tickets based on product specs and discussions.
+- **Context-Aware AI**: Our system intelligently extracts key details from conversations, documents, and reports to create well-structured Jira issues.
+- **Seamless Integration**: Easily integrates with existing workflows, improving productivity without disruption.
+
+## Evolution of OptimxAI
+
+We've undergone a major transformation! Here are two videos that showcase our journey:
+
+- **Before Pivot:** Fine-tuning and deploying AI models  
+  [Insert YouTube Link Here]
+
+- **After Pivot:** Automating Jira ticket creation for product managers  
+  [Insert YouTube Link Here]
 
 ## Getting Started
 
-To run our React-based website, follow these simple instructions:
+To run our React-based website, follow these steps:
 
 ### Installation
 
@@ -31,5 +41,4 @@ To run our React-based website, follow these simple instructions:
    npm run start
    ```
 2. Access the website in your web browser at http://localhost:3000
-
 

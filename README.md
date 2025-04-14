@@ -1,5 +1,7 @@
 # OptimxAI
 
+🔥🔥🔥 Big News: We were selected for a Y Combinator interview (Winter 2023 Batch)!
+
 ## Overview
 
 Welcome to the GitHub repository for **OptimxAI**. This repository serves as the central hub for our company, which has evolved significantly over time. Initially focused on fine-tuning and deploying AI models, we have since pivoted to automating the creation of Jira tickets for product managers, making their workflows more efficient.

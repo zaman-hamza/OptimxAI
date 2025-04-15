@@ -1,6 +1,6 @@
 # OptimxAI
 
-🔥🔥🔥 Big News: We were selected for a Y Combinator interview (Winter 2023 Batch)!
+🔥🔥🔥 Big News: We were selected for a Y Combinator interview (Winter 2024 Batch)!
 
 ## Overview
 
